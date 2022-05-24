@@ -16,3 +16,5 @@ Enter Ctrl+C in terminal to quit.
 ```
 pip install -r requirements.txt
 ```
+## Some screens:
+![collage](https://github.com/ArtemGrablevski/flask-videohosting/blob/main/MyCollages.png)
