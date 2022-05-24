@@ -1,0 +1,161 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    font-family: Verdana, sans-serif;
+    background-color: rgb(240, 244, 252);
+
+}
+header{
+    z-index: 2;
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background-color: rgb(47, 65, 115);
+    display: flex;
+}
+.sphere{
+    font-style: oblique;
+    font-size: 45px;
+    margin-top: 1%;
+    margin-left: 5%;
+    color: white;
+}
+.href-container{
+    font-size: 27px;
+    margin-left: 25%;
+    margin-top: 2%;
+    padding: auto;
+}
+.href-header{
+    padding: 9px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-right: 45px;
+}
+.last{
+    margin-right: 10px;
+}
+.href-header:hover {
+    color: rgb(152, 197, 255);
+}
+main{
+    margin: 2%;
+    margin-top: 8%;
+    height: 1000px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.text-header{
+    color: rgb(21, 28, 83);
+    text-align: center;
+    font-size: 35px;
+    margin-top: 1%;
+}
+.form-container{
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 7%;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 3%;
+    padding-top: 1%;
+    padding-bottom: 10px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px gainsboro solid;
+}
+input[type=submit] {
+    width: 255px;
+    background-color: rgb(47, 65, 115);
+    color: white;
+}
+label{
+    color: rgb(21, 28, 83);
+    font-size: 25px;
+    margin-left: 25%;
+}
+.base-href{
+    font-size: 20px;
+    color: rgb(43, 134, 254);
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.base-href:hover{
+    text-decoration: underline;
+}
+.flash{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+.success{
+    color: rgb(19, 77, 0);
+    background-color: rgb(174, 254, 163);
+}
+.error{
+    color: rgb(77, 0, 0);
+    background-color: rgb(255, 183, 183);
+}
+.flash-message{
+    padding-top: 10px;
+}
+.container{
+    min-height: 700px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 2%;
+}
+.username{
+    font-size: 40px;
+}
+.info{
+    font-size: 25px;
+}
+.avatar{
+    border-radius: 20%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+    margin: 2% 7% 1% 4%;
+}
+.profile-info{
+    display: flex;
+}
+.logout{
+    background-color: rgb(147, 194, 255);
+    color: white;
+    font-size: 25px;
+    margin-top: 2%;
+    margin-left: 15%;
+    width: 100px;
+}
+
+.video-item{
+    display: flex;
+    margin-bottom: 50px;
+}
+.videos{
+    margin-left: 13%;
+    margin-top: 5%;
+}
+.like{
+    margin-top: 10%;
+    color: rgb(255, 85, 85)
+}
+hr{
+    background-color: rgb(251, 251, 251);
+    margin-left: 2%;
+    margin-right: 2%;
+}
+h2{
+    margin: 0;
+    margin-left: 15px;
+}

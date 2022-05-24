@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+{{ super() }}
+
+<div class="flash">
+    {% for category, message in get_flashed_messages(True) %}
+    <div class="flash {{category}}" > <p class="flash-message"> {{message}} </p> </div>
+    {% endfor %}
+</div> 
+
+
+{% endblock %}

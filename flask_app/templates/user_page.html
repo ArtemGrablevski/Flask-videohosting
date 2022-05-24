@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+{{ super() }}
+
+<div class="container">
+    <div class="profile-info">
+        <img src="{{ user.avatar() }} " class="avatar">
+        <div>
+            <p class="username"> {{user.username}}</p>
+            <p class="info"> Registrated: {{ user.date.strftime('%Y-%m-%d') }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="box" style="display: flex;">
+      
+        <div style="margin-left: 3%">
+            <h1>All videos:</h1>
+            <div class="videos" style="margin-left: 2%">
+                {% for video in videos %}
+                <div class="video-item">
+                    <div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 40px;">
+                                <h3 style="color: grey;">{{video.date.strftime('%Y-%m-%d %H:%m')}}</h3>
+                            </div>
+                        </div>
+                        <a href="{{url_for('show_video_page', id=video.id)}}" class="base-href" style="font-size: 15px;"><h2>{{video.title}}</h2></a>
+                        {% if current_user.is_authenticated %}
+                            {% if current_user.has_liked_video(video) %}
+                                <div style="display: flex; margin-top: 25px;">
+                                    <a href="{{ url_for('like_action', video_id=video.id, action='unlike') }}" >
+                                        <img src="{{url_for('static', filename='images/heart_77931.svg')}}" height="35" width="35">
+                                    </a>
+                                    <h2>{{ video.count_likes() }} </h2>
+                                </div>
+                            {% else %}
+                                <div style="display: flex; margin-top: 25px;">
+                                    <a href="{{ url_for('like_action', video_id=video.id, action='like') }}" >
+                                        <img src="{{url_for('static', filename='images/like-heart-outline-symbol_icon-icons.com_73226.svg')}}" height="35" width="35">
+                                    </a>
+                                    <h2>{{ video.count_likes() }} </h2>
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <div style="display: flex; margin-top: 25px;">
+                                <img src="{{url_for('static', filename='images/like-heart-outline-symbol_icon-icons.com_73226.svg')}}" height="35" width="35">
+                                <h2 >{{ video.count_likes() }}</h2>
+                            </div>
+                        {% endif %}
+        
+                    </div>
+                    <div>
+                        <video width="700" height="470" controls="controls" loop="loop" style="background-color: white; margin-top: 0px; margin-left: 20%;">
+                            <source src="/{{video.path}}" type="video/mp4" > 
+                        </video>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+
+{% endblock %}

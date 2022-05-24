@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+{{ super() }}
+
+<div class="form-container">
+    <label>Sign in</label>
+    <form action="/signIn" method="post" >
+        <p> <input type="text" name="email" placeholder="Email"> </p>
+        <p> <input type="password" name="password" placeholder="Password"> </p>
+        <p> <input type="submit" value="Sign in"/> </p>
+    </form>
+    <a class="base-href" href="{{ url_for('password_recovery')}}">Forgot password?</a>
+    <div class="flash">
+        {% for category, message in get_flashed_messages(True) %}
+        <div class="flash {{category}}" ><p class="flash-message"> {{message}} </p></div>
+        {% endfor %}
+    </div> 
+</div>
+
+
+{% endblock %}

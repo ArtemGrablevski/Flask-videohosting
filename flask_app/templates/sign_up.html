@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+{{ super() }}
+
+<div class="form-container">
+
+    <form action="/signUp" method="post" class="form">
+        <label>Sign up</label>
+        <p> <input type="text" name="username" placeholder="Username"> </p>
+        <p> <input type="text" name="email" placeholder="Email"> </p>
+        <p> <input type="password" name="password1" placeholder="Password"> </p>
+        <p> <input type="password" name="password2" placeholder="Repeat password"> </p>
+        <p> <input type="submit" value="Get verification email"/> </p>
+    </form>
+    <div class="flash">
+        {% for category, message in get_flashed_messages(True) %}
+        <div class="flash {{category}}" > <p class="flash-message"> {{message}} </p> </div>
+        {% endfor %}
+    </div> 
+
+</div>
+
+{% endblock %}

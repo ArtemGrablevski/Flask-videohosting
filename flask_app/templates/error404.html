@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+{{ super() }}
+
+<div class="container" style="padding-top: 5%; ">
+    <h1 style="text-align: center; color: rgb(247, 142, 142)">Ooops... Page not found</h1>
+    <a href="{{url_for('index')}}" class="base-href" style="margin-left: 43%;">Return to the homepage</a>
+</div>
+
+{% endblock %}
