@@ -1,4 +1,4 @@
-# Flask-videohosting
+# Flask Videohosting
 ### A videohosting, created with the help of Flask and its extensions.
 ## Includes:
 - Authorization system with email verification
