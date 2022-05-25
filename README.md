@@ -8,7 +8,7 @@
 - Some other features
 ## Local run:
 ```
-python run_server.py
+python3 run_server.py
 ```
 Go to to http://127.0.0.1:5000 in your browser. <br>
 Enter Ctrl+C in terminal to quit.
